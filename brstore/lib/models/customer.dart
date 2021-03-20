@@ -14,7 +14,7 @@ class CustomerModel {
   Map<String, dynamic> toJson() {
     Map<String, dynamic> map = {};
 
-    map.addALL({
+    map.addAll({
       'email': email,
       'first_name': firstName,
       'last_name': lastName,

@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
@@ -21,7 +21,7 @@ ProgressHUD({
 }) : super(key: key);
 
 @override
-Widget build(BuildContext context){
+Widget build(BuildContext context) {
   List<Widget> widgetList = new List<Widget>();
   widgetList.add(child);
   if (inAsyncCall) {
@@ -35,7 +35,11 @@ Widget build(BuildContext context){
           child: new CircularProgressIndicator()
           ),
       ],
-    )
+    );
+    widgetList.add(modal);
   }
-
+  return Stack (
+    children: widgetList,
+  );
+}
 }

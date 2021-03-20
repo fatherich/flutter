@@ -34,4 +34,6 @@ class APIservice {
 
     return ret;
   }
+
+  Dio() {}
 }
